@@ -1,0 +1,201 @@
+.home-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+ margin-top: 80px; /* Must match header height */
+  min-height: calc(100vh - 60px); /* Prevents overlap */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.header-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.get-started-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.get-started-btn:hover {
+  background-color: #27ae60;
+}
+
+.contact-us-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.contact-us-btn:hover {
+  background-color: #2980b9;
+}
+
+.generate-btn, .export-btn {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.generate-btn:hover, .export-btn:hover {
+  background-color: #8e44ad;
+}
+
+.generate-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.management-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-btn:hover {
+  background-color: #bdc3c7;
+}
+
+.tab-btn.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.tab-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.management-section, .timetable-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.add-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.add-form input, .add-form select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.add-form button {
+  padding: 8px 16px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.items-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.items-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.remove-btn {
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.timetable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timetable-table th, .timetable-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.timetable-table th {
+  background-color: #3498db;
+  color: white;
+}
+
+.timetable-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.timetable-table tr:hover {
+  background-color: #e6f7ff;
+}

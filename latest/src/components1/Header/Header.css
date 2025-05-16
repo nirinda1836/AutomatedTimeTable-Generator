@@ -1,0 +1,243 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Fixed height */
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure header stays on top */
+}.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+/* Add this to your global styles or App.css */
+body {
+  margin: 0;
+  padding-top: 60px; /* Must match header height */
+  min-height: 100vh;
+}
+
+/* Ensure main content has proper spacing */
+.main-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}  
+  .header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-container:hover {
+    transform: scale(1.03);
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #3498db;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link.active {
+    color: #3498db;
+  }
+  
+  .nav-link.active::after {
+    width: 100%;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1.5rem;
+  }
+  
+  .login-btn, .signup-btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .login-btn {
+    color: #3498db;
+    border: 2px solid #3498db;
+  }
+  
+  .login-btn:hover {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .signup-btn {
+    background-color: #3498db;
+    color: white;
+    border: 2px solid #3498db;
+  }
+  
+  .signup-btn:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+  }
+  
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 992px) {
+    .nav-links {
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 80px);
+      background-color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 2rem;
+      gap: 2rem;
+      transition: left 0.3s ease;
+    }
+  
+    .nav-links.active {
+      left: 0;
+    }
+  
+    .mobile-menu-btn {
+      display: block;
+    }
+  
+    .auth-buttons {
+      margin-left: 0;
+    }
+  }
+  /* src/components/Header/Header.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+  }
+  
+  .header-container {
+    padding: 0 1rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+}
